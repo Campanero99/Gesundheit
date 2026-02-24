@@ -1,6 +1,6 @@
 {
-"name": "Alimentación y Salud",
-"short_name": "Alimentos",
+"name": "Ernaehrung und Krankheiten",
+"short_name": "Gesundheit",
 "icons": [
 {
 "src": "icono180.png",
@@ -13,7 +13,7 @@
 "type": "image/png"
 }
 ],
-"start_url": "Alimentos.html",
+"start_url": "Gesundheit.html",
 "display": "standalone",
 "background_color": "#667eea",
 "theme_color": "#667eea"
