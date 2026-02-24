@@ -1,10 +1,15 @@
 
+
+
 <!DOCTYPE html>
-<html lang="de">
-<head>
+<html lang="de"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ernährung - Editierbar</title>
+<title>Ernährung und Krankheiten</title>
+<link rel="apple-touch-icon" href="icono180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Alimentación y Salud">
+<meta name="theme-color" content="#667eea">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;padding:15px}
@@ -50,24 +55,45 @@ h1{font-size:1.6em;margin-bottom:4px}
 <body>
 <div class="container">
   <header>
-    <h1>&#127822; Ernährung und Krankheiten</h1>
-    <div style="font-size:.85em;opacity:.85">Editierbare Datenbank</div>
+    <h1>🍎 Ernährung und Krankheiten</h1>
+    <div style="font-size:.85em;opacity:.85"></div>
   </header>
-  <div class="aviso" id="aviso">Laden...</div>
+  <div class="aviso" id="aviso" style="display: none; background: rgb(212, 237, 218); border-color: rgb(40, 167, 69); color: rgb(21, 87, 36);">✓ Bereit! localStorage funktioniert.</div>
   <div class="controls">
-    <input type="text" id="buscar" class="search-input" placeholder="&#128269; Suchen...">
+    <input type="text" id="buscar" class="search-input" placeholder="🔍 Suchen...">
     <div class="btns">
-      <button class="btn bn" onclick="abrirNuevo()">&#10133; Neu</button>
-<button class="btn bg" onclick="guardarHTML()" style="background:#27ae60">&#128194; App speichern</button>
-<button class="btn bo" onclick="ordenar()">&#128202; Sortieren</button>
-<button class="btn ba" onclick="todos()">&#128260; Alle</button>
+      <button class="btn bn" onclick="abrirNuevo()">➕ Neu</button>
+      <button class="btn bg" onclick="guardarHTML()" style="background:#27ae60">📂 Speichern</button>
+      <button class="btn bo" onclick="ordenar()">📊 Sortieren</button>
+      <button class="btn ba" onclick="todos()">🔄 Alle</button>
     </div>
-    <div class="stats" id="stats"></div>
+    <div class="stats dirty" id="stats">&amp; 2 nicht gespeichert —  5 / 1889</div>
   </div>
-  <div class="results" id="lista"></div>
+  <div class="results" id="lista"><div class="record" id="r734"><div class="rec-header" onclick="tog(734)"><div class="rec-title"><strong>#735</strong> Eccemas</div><span class="rec-arrow">▼</span></div><div class="rec-body">En realidad, los eccemas pertenecen al capítulo de las alergias porque suelen ser de naturaleza alérgica, pero es posible que no los busques ahí. Por lo tanto, se trata sobre todo de síntomas alérgicos, por lo que se aplica lo dicho en ese capítulo. También me gustaría señalar que a menudo pueden tratarse con éxito con orina. Como las enfermedades de la piel son sólo síntomas, a menudo es difícil distinguirlas; a menudo pueden ser infecciones o enfermedades fúngicas, en cuyo caso pueden responder bien a la plata coloidal o, por supuesto, a pomadas antibióticas o antifúngicas adecuadas.
+
+Dr. Kroiss</div><div class="rec-btns"><button class="rbtn rc" onclick="copiar(734)">📋 Copiar</button><button class="rbtn re" onclick="abrirEdit(734)">✏ Editar</button><button class="rbtn rd" onclick="abrirDel(734)">🗑 Eliminar</button></div></div><div class="record" id="r735"><div class="rec-header" onclick="tog(735)"><div class="rec-title"><strong>#736</strong> Eccema cara</div><span class="rec-arrow">▼</span></div><div class="rec-body">Las frutas cítricas no causarán erupciones si no se trata la cáscara.</div><div class="rec-btns"><button class="rbtn rc" onclick="copiar(735)">📋 Copiar</button><button class="rbtn re" onclick="abrirEdit(735)">✏ Editar</button><button class="rbtn rd" onclick="abrirDel(735)">🗑 Eliminar</button></div></div><div class="record" id="r736"><div class="rec-header" onclick="tog(736)"><div class="rec-title"><strong>#737</strong> Eccemas (1/2)</div><span class="rec-arrow">▼</span></div><div class="rec-body">Eczema
+
+Las causas son variadas.
+Pueden encontrarse en los alimentos (proteína animal) en toxinas y contaminantes.
+El eczema en las manos puede provenir de las joyas, incluso si se han usado durante mucho tiempo.
+Como remedio homeopático, se puede considerar Rhus tox 6X, 5 gotas 3 veces al día.
+
+El eccema en el oído a menudo es causado por residuos de jabón.
+Se debe evitar el agua en el canal auditivo. Como limpiar con hisopos de algodón.</div><div class="rec-btns"><button class="rbtn rc" onclick="copiar(736)">📋 Copiar</button><button class="rbtn re" onclick="abrirEdit(736)">✏ Editar</button><button class="rbtn rd" onclick="abrirDel(736)">🗑 Eliminar</button></div></div><div class="record" id="r737"><div class="rec-header" onclick="tog(737)"><div class="rec-title"><strong>#738</strong> Eccemas (2/2)</div><span class="rec-arrow">▼</span></div><div class="rec-body">No use cremas y lave su cabello lo menos posible con sustancias químicas.
+Si el eczema se limita al rostro, es probable que se esté haciendo algo en la piel del rostro y en sus proximidades que no se esté haciendo en el resto del cuerpo.
+
+Se recomienda evitar las proteínas animales y el azúcar industrial.</div><div class="rec-btns"><button class="rbtn rc" onclick="copiar(737)">📋 Copiar</button><button class="rbtn re" onclick="abrirEdit(737)">✏ Editar</button><button class="rbtn rd" onclick="abrirDel(737)">🗑 Eliminar</button></div></div><div class="record" id="r738"><div class="rec-header" onclick="tog(738)"><div class="rec-title"><strong>#739</strong> Eccemas bebes</div><span class="rec-arrow">▼</span></div><div class="rec-body">Si se desarrolla eccema en bebés alimentados exclusivamente con leche materna, indica un exceso de alimento. Se debe reducir la cantidad de alimento.
+
+Se recomienda amamantar con menos frecuencia y ofrecer alimentos frescos (verduras, fruta, papilla de cereales frescos) como refrigerio.
+
+Eccema detrás de las orejas: Viola tricolor D3, 5 gotas 3 veces al día.
+
+Eccema en las manos: Suspender todos los anillos, cremas y ungüentos.
+
+Rhus tox D6, 5 gotas 3 veces al día.</div><div class="rec-btns"><button class="rbtn rc" onclick="copiar(738)">📋 Copiar</button><button class="rbtn re" onclick="abrirEdit(738)">✏ Editar</button><button class="rbtn rd" onclick="abrirDel(738)">🗑 Eliminar</button></div></div></div>
 </div>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast">✓ OK! Speichern!</div>
 
 <div class="overlay" id="ovE">
   <div class="modal">
@@ -75,19 +101,19 @@ h1{font-size:1.6em;margin-bottom:4px}
     <div class="fg"><label>Titel *</label><input type="text" id="mT"></div>
     <div class="fg"><label>Inhalt *</label><textarea id="mI"></textarea></div>
     <div class="mbtns">
-      <button class="mbtn mcan" onclick="cerrarE()">Abbrechen</button>
-      <button class="mbtn mok" onclick="guardarReg()">&#10003; Speichern</button>
+      <button class="mbtn mcan" onclick="cerrarE()">Rückgängig</button>
+      <button class="mbtn mok" onclick="guardarReg()">✓ Speichern</button>
     </div>
   </div>
 </div>
 
 <div class="overlay" id="ovD">
   <div class="modal">
-    <h2>&#9888; Löschen?</h2>
-    <p id="mDT" style="margin:12px 0;font-size:14px"></p>
+    <h2>⚠Löschen?</h2>
+    <p id="mDT" style="margin:12px 0;font-size:14px">Löschen: "Tierische Produkte"?</p>
     <div class="mbtns">
-      <button class="mbtn mcan" onclick="cerrarD()">Abbrechen</button>
-      <button class="mbtn mdel" onclick="borrarOk()">&#128465; Löschen</button>
+      <button class="mbtn mcan" onclick="cerrarD()">Rückgängig</button>
+      <button class="mbtn mdel" onclick="borrarOk()">🗑 Löschen</button>
     </div>
   </div>
 </div>
@@ -167,20 +193,20 @@ function setAviso(color, msg) {
 function render() {
     var q = document.getElementById('buscar').value.toLowerCase().trim();
     var lista = q
-        ? data.filter(function(r) { return r.titulo.toLowerCase().indexOf(q) >= 0 || r.contenido.toLowerCase().indexOf(q) >= 0; })
+        ? data.filter(function(r) { return r.titulo.toLowerCase().indexOf(q) >= 0; })
         : data;
 
     var st = document.getElementById('stats');
     if (pend > 0) {
         st.className = 'stats dirty';
-        st.textContent = '&#9888; ' + pend + ' nicht gespeichert  —  ' + lista.length + ' / ' + data.length;
+        st.textContent = pend + ' nicht gespeichert  —  ' + lista.length + ' / ' + data.length;
     } else {
         st.className = 'stats';
-        st.textContent = lista.length + ' von ' + data.length + ' Einträgen';
+        st.textContent = lista.length + ' von ' + data.length + ' Datensätze';
     }
 
     if (lista.length === 0) {
-        document.getElementById('lista').innerHTML = '<div class="empty">&#128269; Keine Ergebnisse</div>';
+        document.getElementById('lista').innerHTML = '<div class="empty">&#128269; sin resultados</div>';
         return;
     }
 
@@ -220,7 +246,7 @@ function copiar(i) {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    toast('&#10003; Kopiert!');
+    toast('&#10003; Gespeichert!');
 }
 
 function abrirEdit(i) {
@@ -233,7 +259,7 @@ function abrirEdit(i) {
 
 function abrirNuevo() {
     eIdx = -1;
-    document.getElementById('mTit').textContent = 'Neuer Eintrag';
+    document.getElementById('mTit').textContent = 'Neu';
     document.getElementById('mT').value = '';
     document.getElementById('mI').value = '';
     document.getElementById('ovE').classList.add('show');
@@ -247,7 +273,7 @@ function guardarReg() {
     var titulo = document.getElementById('mT').value.trim();
     var contenido = document.getElementById('mI').value.trim();
     if (!titulo || !contenido) {
-        toast('&#10060; Titel und Inhalt erforderlich');
+        toast('&#10060; Titel und Inhalt notwendig');
         return;
     }
     if (eIdx >= 0) {
@@ -258,7 +284,7 @@ function guardarReg() {
     pend++;
     cerrarE();
     render();
-    toast('&#10003; OK! Drücke Speichern!');
+    toast('&#10003; OK! Speichern!');
 }
 
 function abrirDel(i) {
@@ -297,7 +323,7 @@ function guardar() {
         for (var t = 0; t < 10; t++) {
             localStorage.removeItem(K + '_' + t);
         }
-        // Speichern en trozos de 1000
+        // Guardar en trozos de 1000
         var trozo = 0;
         var TROZO = 1000;
         for (var i = 0; i < data.length; i += TROZO) {
@@ -367,19 +393,19 @@ init();
         var ts = new Date().toISOString().slice(0,10);
         var a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'Ernaehrung_' + ts + '.html';
+        a.download = 'Alimentacion_' + ts + '.html';
         a.click();
         URL.revokeObjectURL(a.href);
     }
 
     </script>
-	<!-- Rechtlicher Hinweis -->
-<div id="aviso-legal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;display:flex;align-items:center;justify-content:center;">
+<!-- Aviso legal -->
+<div id="aviso-legal" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 99999; display: flex; align-items: center; justify-content: center;">
   <div style="background:white;padding:30px;border-radius:10px;max-width:500px;text-align:center;font-family:Arial,sans-serif;">
     <h2 style="color:#c0392b;">⚕️ Wichtiger Hinweis</h2>
     <p style="font-size:15px;line-height:1.6;">Die in dieser Anwendung enthaltenen Informationen dienen ausschließlich <strong>informativen und allgemeinen Zwecken</strong>. Sie ersetzen in keinem Fall eine ärztliche Diagnose, Behandlung oder Beratung.<br><br>Bei gesundheitlichen Fragen wenden Sie sich bitte <strong>immer an Ihren Arzt oder Facharzt.</strong></p>
     <button onclick="document.getElementById('aviso-legal').style.display='none'" style="background:#27ae60;color:white;border:none;padding:12px 30px;border-radius:6px;font-size:16px;cursor:pointer;margin-top:10px;">✅ Verstanden, weiter</button>
   </div>
 </div>
-</body>
-</html>
+
+</body></html>
