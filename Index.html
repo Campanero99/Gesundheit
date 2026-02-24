@@ -393,7 +393,7 @@ init();
         var ts = new Date().toISOString().slice(0,10);
         var a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'Alimentacion_' + ts + '.html';
+        a.download = 'Gesundheit_' + ts + '.html';
         a.click();
         URL.revokeObjectURL(a.href);
     }
